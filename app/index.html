@@ -1,17 +1,303 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorem</title>
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
-
 <body>
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <nav class="menu">
+        <a class="header__logo" href="#">
+          <img class="header__logo-img" src="./images/logo.png" alt="logo">
+        </a>
+        <ul class="menu__items">
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">
+              Products
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">
+              Rooms
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">
+              Inspirations
+            </a>
+          </li>
+        </ul>
+        <ul class="menu__user-items">
+          <li class="menu__user-item">
+            <a class="menu__user-link" href="#">
+              <img class="menu__user-img" src="./images/icons/heart.svg" alt="favorites">
+            </a>
+          </li>
+          <li class="menu__user-item">
+            <a class="menu__user-link" href="#">
+              <img class="menu__user-img" src="./images/icons/cart.svg" alt="cart">
+            </a>
+          </li>
+          <li class="menu__user-item">
+            <a class="menu__user-link" href="#">
+              <img class="menu__user-img" src="./images/user-logo.png" alt="user-picutre">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="intro" style="background-image: url('images/introbg.jpg');">
+    <div class="container">
+      <div class="intro__inner">
+        <div class="intro__content">
+          <h1 class="intro__content-title">
+            High-Quality
+            Furniture Just
+            For You
+          </h1>
+          <p class="intro__content-subtitle">
+            Our furniture is made from selected and best quality materials that are suitable for your dream home
+          </p>
+          <button class="intro__content-btn" type="button">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="advantages">
+    <div class="container">
+      <ul class="advantages__items">
+        <li class="advantages__item">
+          <img class="advantages__item-img" src="images/icons/quality.svg" alt="img advantages">
+          <div class="advantages__inner">
+            <h3 class="advantages__item-title">High Quality</h3>
+            <p class="advantages__item-subtitle">Crafted from top materials</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-img" src="images/icons/protection.svg" alt="img advantages">
+          <div class="advantages__inner">
+            <h3 class="advantages__item-title">Warrany Protection</h3>
+            <p class="advantages__item-subtitle">Over 2 years</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-img" src="images/icons/shipping.svg" alt="img advantages">
+          <div class="advantages__inner">
+            <h3 class="advantages__item-title">Free Shipping</h3>
+            <p class="advantages__item-subtitle">Order over 150 $</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <img class="advantages__item-img" src="images/icons/support.svg" alt="img advantages">
+          <div class="advantages__inner">
+            <h3 class="advantages__item-title">24 / 7 Support</h3>
+            <p class="advantages__item-subtitle">Dedicated support</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <section class="products">
+    <div class="container">
+      <div class="products__inner">
+        <h2 class="products__title">Our Products</h2>
+        <ul class="products__items">
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/1.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Syltherine</h3>
+              <p class="products__item-subtitle">Stylish cafe chair</p>
+              <span class="products__item-price">Rp 2.500.000</span>
+              <span class="products__item-preprice">Rp 3.500.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/2.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Leviosa</h3>
+              <p class="products__item-subtitle">Stylish cafe chair</p>
+              <span class="products__item-price">Rp 2.500.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/3.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Lolito</h3>
+              <p class="products__item-subtitle">Luxury big sofa</p>
+              <span class="products__item-price">Rp 7.000.000</span>
+              <span class="products__item-preprice">Rp 14.000.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/4.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Respira</h3>
+              <p class="products__item-subtitle">Minimalist fan</p>
+              <span class="products__item-price">Rp 500.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/5.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Grifo</h3>
+              <p class="products__item-subtitle">Night lamp</p>
+              <span class="products__item-price">Rp 1.500.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/6.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Muggo</h3>
+              <p class="products__item-subtitle">Small mug</p>
+              <span class="products__item-price">Rp 150.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/7.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Pingky</h3>
+              <p class="products__item-subtitle">Cute bed set</p>
+              <span class="products__item-price">Rp 7.000.000</span>
+              <span class="products__item-preprice">Rp 14.000.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="products__item">
+            <img class="products__item-img" src="images/products/8.jpg" alt="photo of product">
+            <div class="products__item-descr">
+              <h3 class="products__item-title">Potty</h3>
+              <p class="products__item-subtitle">Minimalist flower pot</p>
+              <span class="products__item-price">Rp 500.000</span>
+            </div>
+            <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/share.svg" alt="logo share">
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img class="products__nav-img" src="./images/icons/heartwhite.svg" alt="logo like">
+                  like
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer"></footer>
+
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
-    <script src='js/index.min.js'></script>
+<script src="js/index.min.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,14 @@
+body {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $default;
+
+  @extend %gilroy-400;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1220px;
+}

@@ -1,0 +1,55 @@
+.intro {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    min-height: 100vh;
+  }
+
+  &__content {
+    padding: 60px;
+    width: 494px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(31px);
+  }
+
+  &__content-title {
+    margin-bottom: 16px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    color: $title;
+
+    @extend %gilroy-700;
+  }
+
+  &__content-subtitle {
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #898989;
+
+    @extend %gilroy-500;
+  }
+
+  &__content-btn {
+    padding: 24px 138px;
+    width: 100%;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #e89f71;
+
+    @extend %gilroy-600;
+  }
+}

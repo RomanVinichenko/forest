@@ -1,0 +1,60 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  padding-top: 25px;
+
+  &__logo-img {
+    margin-right: 40px;
+    max-width: 75px;
+    max-height: 30px;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+
+    &__items {
+      display: flex;
+      margin-right: auto;
+    }
+
+    &__item {
+      position: relative;
+      margin-right: 30px;
+      padding-right: 28px;
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 35%;
+        width: 14px;
+        height: 9px;
+        background-image: url("../../images/icons/arrowdown.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__item-link {
+      color: $title;
+
+      @extend %gilroy-500;
+    }
+
+    &__user-items {
+      display: flex;
+      align-items: center;
+    }
+
+    &__user-item {
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+  }
+}
