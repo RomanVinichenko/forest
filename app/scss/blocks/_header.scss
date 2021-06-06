@@ -26,24 +26,42 @@
     &__item {
       position: relative;
       margin-right: 30px;
-      padding-right: 28px;
+    }
 
-      &:not(:last-child)::after {
+    &__item-link {
+      position: relative;
+      padding-right: 28px;
+      color: $title;
+
+      @extend %gilroy-500;
+
+      &:hover {
+        color: #e89f71;
+        transition: all 0.3s;
+
+      }
+    }
+
+    &__item-link--active {
+
+      transition: all 0.5s;
+
+      &::after {
         content: "";
         position: absolute;
         right: 0;
-        top: 35%;
+        top: 6px;
         width: 14px;
         height: 9px;
         background-image: url("../../images/icons/arrowdown.svg");
         background-repeat: no-repeat;
+        transition: all 0.3s;
+
       }
-    }
 
-    &__item-link {
-      color: $title;
-
-      @extend %gilroy-500;
+      &:hover::after {
+        transform: rotate(-90deg);
+      }
     }
 
     &__user-items {
@@ -55,6 +73,15 @@
       &:not(:first-child) {
         margin-left: 32px;
       }
+    }
+  }
+
+  &--active {
+    padding: 5px 0;
+    background-color: rgba(#e89f71, 0.9);
+
+    .menu__item-link:hover {
+      color: $wh;
     }
   }
 }

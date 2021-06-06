@@ -1,0 +1,125 @@
+.footer {
+  padding-bottom: 50px;
+  color: $footer;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    border-top: 1px solid #d8d8d8;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  &__logo {
+    display: block;
+    margin: 6px 0 22px;
+  }
+
+  &__info-text {
+    margin-bottom: 15px;
+  }
+
+  &__info-location {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/icons/location.svg");
+    }
+  }
+
+  &__info-tel {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/icons/tel.svg");
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $bl;
+
+    @extend %gilroy-700;
+  }
+
+  &__item-link {
+    color: $footer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @extend %gilroy-500;
+  }
+
+  &__item-input {
+    margin-right: 5px;
+    padding: 10px 12px;
+    width: 242px;
+    border: none;
+    color: $default;
+    background-color: #f4f5f7;
+  }
+
+  &__item-btn {
+    position: relative;
+    width: 46px;
+    height: 45px;
+    border: none;
+    background-color: #e89f71;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 11px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../images/icons/send.svg");
+    }
+  }
+
+  &__item-form {
+    width: 290px;
+  }
+
+  &__item-confirm {
+    display: flex;
+  }
+}

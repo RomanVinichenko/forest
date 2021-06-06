@@ -1,0 +1,43 @@
+.gallery {
+  padding: 0 0 44px;
+
+  &__pretitle {
+    font-size: 20px;
+    text-align: center;
+    color: #616161;
+
+    @extend %gilroy-600;
+  }
+
+  &__title {
+    margin-bottom: 43px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__content-groupl {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    max-width: 510px;
+
+    .gallery__content-img {
+      margin: 0 10px 10px 0;
+      object-fit: cover;
+    }
+  }
+
+  &__content-groupr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 710px;
+
+    .gallery__content-img:nth-child(odd) {
+      margin: 0 10px 10px 0;
+    }
+  }
+}

@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $default;
+  background-color: $wh;
 
   @extend %gilroy-400;
 }
@@ -21,4 +22,16 @@ body {
   color: $title;
 
   @extend %gilroy-700;
+}
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
