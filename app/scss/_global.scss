@@ -12,3 +12,13 @@ body {
   padding: 0 10px;
   max-width: 1220px;
 }
+
+.title {
+  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+  color: $title;
+
+  @extend %gilroy-700;
+}

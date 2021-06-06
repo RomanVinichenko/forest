@@ -1,0 +1,126 @@
+.articles {
+  position: relative;
+  padding: 0 0 64px;
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 380px;
+    background-color: #fff;
+
+    &:hover {
+      box-shadow: 0 6px 47px 3px rgba(97, 97, 97, 0.5);
+    }
+  }
+
+  &__item-descr {
+    padding: 15px 55px 15px 15px;
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $title;
+
+    @extend %gilroy-600;
+  }
+
+  &__item-date {
+    font-size: 14px;
+  }
+
+  &__item-img {
+    width: 100%;
+    min-height: 251px;
+    object-fit: cover;
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    display: flex;
+    justify-content: center;
+
+    li {
+      cursor: pointer;
+
+      button {
+        position: relative;
+        padding: 0;
+        width: 26px;
+        height: 26px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #d8d8d8;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-color: #e89f71;
+
+          &::before {
+            background-color: #e89f71;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+    font-size: 0;
+  }
+}
+
+.slick-prev {
+  position: relative;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 9px;
+    height: 16px;
+    background-image: url("../../images/icons/arrowleft.svg");
+  }
+}
+
+.slick-next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
