@@ -1,23 +1,23 @@
 .articles {
   position: relative;
-  padding: 0 0 64px;
+  padding: 80px 0 70px;
 
   &__title {
     margin-bottom: 36px;
   }
 
-  &__items {
-    display: flex;
-    justify-content: space-between;
+  &__item-link {
+    display: block;
   }
 
   &__item {
-    width: 100%;
-    max-width: 380px;
-    background-color: #fff;
+    margin: 10px 5px;
+    max-width: 390px;
+    background-color: $wh;
+    transition: all 0.3s;
 
     &:hover {
-      box-shadow: 0 6px 47px 3px rgba(97, 97, 97, 0.5);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0), 0 5px 5px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -27,11 +27,10 @@
 
   &__item-title {
     margin-bottom: 8px;
+    font-weight: 600;
     font-size: 24px;
     line-height: 1.2;
     color: $title;
-
-    @extend %gilroy-600;
   }
 
   &__item-date {
@@ -47,9 +46,10 @@
   .slick-dots {
     position: absolute;
     left: 50%;
-    bottom: -10%;
+    bottom: -50px;
     display: flex;
     justify-content: center;
+    transform: translateX(-50%);
 
     li {
       cursor: pointer;
@@ -73,17 +73,22 @@
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background-color: #d8d8d8;
+          background-color: $grey;
           transform: translate(-50%, -50%);
+          transition: all 0.3s;
+        }
+
+        &:hover::before {
+          background-color: $accent;
         }
       }
 
       &.slick-active {
         button {
-          border-color: #e89f71;
+          border-color: $accent;
 
           &::before {
-            background-color: #e89f71;
+            background-color: $accent;
           }
         }
       }
@@ -101,26 +106,44 @@
     border-radius: 50%;
     box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
     font-size: 0;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 25%;
+      bottom: 25%;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
 .slick-prev {
   position: relative;
-  left: 0;
+  left: 5px;
   transform: translate(-50%, -50%);
 
   &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 9px;
-    height: 16px;
     background-image: url("../../images/icons/arrowleft.svg");
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    transform: translateX(-5px);
   }
 }
 
 .slick-next {
-  right: 0;
+  right: 5px;
   transform: translate(50%, -50%);
+
+  &::after {
+    background-image: url("../../images/icons/arrowright.svg");
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    transform: translateX(5px);
+  }
 }

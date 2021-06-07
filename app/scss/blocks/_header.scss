@@ -6,8 +6,11 @@
   z-index: 3;
   padding-top: 25px;
 
-  &__logo-img {
+  &__logo {
     margin-right: 40px;
+  }
+
+  &__logo-img {
     max-width: 75px;
     max-height: 30px;
   }
@@ -17,6 +20,10 @@
     align-items: center;
     justify-content: space-between;
     height: 40px;
+
+    &__btn {
+      display: none;
+    }
 
     &__items {
       display: flex;
@@ -31,20 +38,17 @@
     &__item-link {
       position: relative;
       padding-right: 28px;
+      font-weight: 500;
       color: $title;
 
-      @extend %gilroy-500;
-
       &:hover {
-        color: #e89f71;
+        color: $accent;
         transition: all 0.3s;
-
       }
     }
 
     &__item-link--active {
-
-      transition: all 0.5s;
+      transition: all 0.3s;
 
       &::after {
         content: "";
@@ -56,7 +60,6 @@
         background-image: url("../../images/icons/arrowdown.svg");
         background-repeat: no-repeat;
         transition: all 0.3s;
-
       }
 
       &:hover::after {
@@ -78,7 +81,7 @@
 
   &--active {
     padding: 5px 0;
-    background-color: rgba(#e89f71, 0.9);
+    background-color: rgba($accent, 0.9);
 
     .menu__item-link:hover {
       color: $wh;

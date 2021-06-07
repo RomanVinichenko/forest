@@ -1,12 +1,11 @@
 .gallery {
-  padding: 0 0 44px;
+  padding: 50px 0 44px;
 
   &__pretitle {
+    font-weight: 600;
     font-size: 20px;
     text-align: center;
     color: #616161;
-
-    @extend %gilroy-600;
   }
 
   &__title {
@@ -38,6 +37,7 @@
 
     .gallery__content-img:nth-child(odd) {
       margin: 0 10px 10px 0;
+      object-fit: cover;
     }
   }
 }

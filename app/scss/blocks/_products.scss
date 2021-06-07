@@ -1,10 +1,11 @@
 .products {
-  padding: 0 0 84px;
+  padding-top: 80px;
 
   &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -12,12 +13,12 @@
     margin-bottom: 32px;
     width: 100%;
     max-width: 280px;
-    background-color: #f4f5f7;
+    overflow: hidden;
+    background-color: $bggrey;
 
     &:hover {
       .products__nav {
-        opacity: 0.72;
-        transition: opacity 0.3s;
+        transform: translateX(0);
       }
     }
   }
@@ -31,19 +32,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
     padding: 42px;
     width: 100%;
     height: 100%;
-    background-color: $title;
+    background-color: rgba($title, 0.72);
+    transform: translateX(-800%);
+    transition: all 0.3s;
   }
 
   &__nav-btn {
     margin-bottom: 24px;
-    padding: 12px 58px;
+    padding: 12px;
     border: none;
-    color: #e89f71;
-    background-color: #fff;
+    font-weight: 600;
+    color: $accent;
+    background-color: $wh;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $wh;
+      background-color: $accent;
+    }
   }
 
   &__nav-links {
@@ -61,10 +71,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    font-weight: 600;
+    color: $wh;
+    transition: all 0.3s;
 
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    &:hover {
+      color: $accent;
     }
   }
 
@@ -80,25 +96,21 @@
 
   &__item-title {
     margin-bottom: 8px;
+    font-weight: 600;
     font-size: 24px;
     line-height: 1.2;
     color: $title;
-
-    @extend %gilroy-600;
   }
 
   &__item-subtitle {
     margin-bottom: 8px;
-
-    @extend %gilroy-500;
   }
 
   &__item-price {
     margin-right: 16px;
+    font-weight: 600;
     font-size: 20px;
     color: $title;
-
-    @extend %gilroy-600;
   }
 
   &__item-preprice {
@@ -110,11 +122,16 @@
     display: block;
     margin: 0 auto;
     padding: 12px 82px;
-    border: 1px solid #e89f71;
-    color: #e89f71;
-    background-color: #fff;
+    border: 1px solid $accent;
+    font-weight: 600;
+    color: $accent;
+    background-color: $wh;
+    transition: all 0.3s;
     cursor: pointer;
 
-    @extend %gilroy-600;
+    &:hover {
+      color: $wh;
+      background-color: $accent;
+    }
   }
 }

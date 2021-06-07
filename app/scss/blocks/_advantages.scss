@@ -1,5 +1,5 @@
 .advantages {
-  padding: 66px 88px;
+  padding-top: 66px;
 
   &__items {
     display: flex;
@@ -23,14 +23,8 @@
 
   &__item-title {
     margin-bottom: 3px;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 1.5;
     color: $title;
-
-    @extend %gilroy-600;
-  }
-
-  &__item-subtitle {
-    @extend %gilroy-500;
   }
 }
