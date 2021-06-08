@@ -1,7 +1,19 @@
 # Task: Test Landing
-1. npm i
-2. gulp - for start gulp
-3. gulp build - production
+
+To start project you must have installed Node JS on your local PC
+
+1. clone repository "git clone 'reponame'"
+
+1. in terminal run "npm insatll"
+
+2. run "gulp" for start project
+
+...
+
+Для запуска проэкта необходимо установить пакетный модуль Node JS, глобально на вашем ПК
+
+1. Склонируйте репозиторий с помощбю команды "git clone '#
+
 
 ### To deploy app
 1. npm run deploy
