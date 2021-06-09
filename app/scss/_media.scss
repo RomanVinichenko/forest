@@ -12,6 +12,14 @@ $s: 480px;
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    .slick-prev {
+      left: 45px;
+    }
+
+    .slick-next {
+      right: 45px;
+    }
   }
 
   .gallery {
@@ -74,6 +82,7 @@ $s: 480px;
 
     &__item {
       margin: 5px;
+      max-width: 305px;
     }
   }
 
@@ -82,8 +91,13 @@ $s: 480px;
 
     &__inner {
       flex-wrap: wrap;
-      justify-content: space-around;
       padding-top: 20px;
+      justify-content: center;
+
+    }
+
+    &__item {
+      margin-right: 0;
     }
 
     &__items {
@@ -91,12 +105,31 @@ $s: 480px;
     }
 
     &__info {
-      margin: 0 30px 30px 0;
+      margin: 0 20px 30px 0;
     }
   }
 }
 
 @media (max-width: $lg) {
+
+  .intro {
+
+
+    &__content {
+      padding: 35px 45px;
+    }
+    &__content-title{
+      font-size: 36px;
+    }
+    &__content-subtitle {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__content-btn {
+      padding: 12px;
+    }
+  }
   .advantages {
     &__item {
       justify-content: left;
@@ -112,16 +145,25 @@ $s: 480px;
       max-width: 580px;
     }
   }
+
+  .products {
+    &__item {
+      max-width: 350px;
+    }
+  }
+
+  .footer {
+    &__item {
+      width: 145px;
+    }
+
+  }
 }
 
 @media (max-width: $md) {
   .intro {
     &__content-title {
-      font-size: 38px;
-    }
-
-    &__content-subtitle {
-      font-size: 16px;
+      font-size: 34px;
     }
   }
 
@@ -179,15 +221,39 @@ $s: 480px;
     }
   }
 
+  .products {
+    &__item {
+      max-width: 252px;
+    }
+  }
+
   .footer {
-    &__items {
-      display: none;
+    &__info {
+      max-width: 100%;
     }
 
     &__inner {
-      justify-content: left;
-      margin: 0 auto;
-      width: 300px;
+      display: block;
+    }
+
+    &__items {
+      flex-direction: column;
+    }
+    &__item {
+      flex-direction: row;
+      width: 100%;
+      align-items: baseline;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    &__item-title {
+      margin: 0 20px 10px 0;
+
+    }
+    .footer__item-link {
+      margin: 0 20px 18px 0;
+      text-decoration: underline;
     }
   }
 }
@@ -247,6 +313,13 @@ $s: 480px;
   .footer {
     &__inner {
       display: block;
+    }
+  }
+
+  .products {
+    &__item {
+      max-width: 420px;
+      height: 100%;
     }
   }
 }

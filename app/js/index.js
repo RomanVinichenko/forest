@@ -20,8 +20,18 @@ $(function () {
     autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 1270,
-        settings: 'unslick',
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   });
@@ -68,11 +78,62 @@ $(document).ready(function () {
   list.slice(0, numToShow).show();
 
   button.click(function () {
+    getResponse(8);
     var showing = list.filter(':visible').length;
     list.slice(showing - 1, showing + numToShow).fadeIn();
+
     var nowShowing = list.filter(':visible').length;
     if (nowShowing >= numInList) {
       button.hide();
     }
   });
 });
+
+async function getResponse(number) {
+  let response = await fetch('https://fakestoreapi.com/products');
+  let content = await response.json();
+  console.log(content);
+  content = content.slice(0, number);
+  let list = document.querySelector('.products__items');
+
+  let key;
+
+  for (key in content) {
+    console.log(content);
+    list.innerHTML += `
+          <li class="products__item">
+          <img class="products__item-img" src="${content[key].image}" alt="photo of item">
+          <div class="products__item-descr">
+              <h4 class="products__item-title">${content[key].title}</h4>
+              <p class="products__item-subtitle">${content[key].description}</p>
+              <span class="products__item-price">Rp ${content[key].price}</span>
+              <span class="products__item-preprice">Rp ${content[key].price}</span>
+              <div class="products__nav">
+              <button class="products__nav-btn">Add to cart</button>
+              <div class="products__nav-links">
+                <a class="products__nav-link" href="#">
+                  <img
+                    class="products__nav-img"
+                    src="./images/icons/share.svg"
+                    alt="logo share"
+                  />
+                  Share
+                </a>
+                <a class="products__nav-link" href="#">
+                  <img
+                    class="products__nav-img"
+                    src="./images/icons/heartwhite.svg"
+                    alt="logo like"
+                  />
+                  like
+                </a>
+              </div>
+            </div>
+          </div>
+         </li>
+        `;
+    content[key];
+  }
+}
+
+getResponse(8);

@@ -12,9 +12,8 @@
 
   &__item {
     margin: 10px 5px;
-    max-width: 390px;
     background-color: $wh;
-    transition: all 0.3s;
+    transition: box-shadow 0.3s;
 
     &:hover {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0), 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -111,7 +110,6 @@
     &::after {
       content: "";
       position: absolute;
-      left: 25%;
       bottom: 25%;
       width: 24px;
       height: 24px;
@@ -127,6 +125,7 @@
   &::after {
     background-image: url("../../images/icons/arrowleft.svg");
     transition: all 0.3s;
+    left: 20%;
   }
 
   &:hover::after {
@@ -141,6 +140,8 @@
   &::after {
     background-image: url("../../images/icons/arrowright.svg");
     transition: all 0.3s;
+    left: 27%;
+
   }
 
   &:hover::after {
