@@ -91,9 +91,8 @@ $s: 480px;
 
     &__inner {
       flex-wrap: wrap;
-      padding-top: 20px;
       justify-content: center;
-
+      padding-top: 20px;
     }
 
     &__item {
@@ -111,25 +110,25 @@ $s: 480px;
 }
 
 @media (max-width: $lg) {
-
   .intro {
-
-
     &__content {
       padding: 35px 45px;
     }
-    &__content-title{
+
+    &__content-title {
       font-size: 36px;
     }
+
     &__content-subtitle {
-      font-size: 16px;
       margin-bottom: 10px;
+      font-size: 16px;
     }
 
     &__content-btn {
       padding: 12px;
     }
   }
+
   .advantages {
     &__item {
       justify-content: left;
@@ -156,7 +155,6 @@ $s: 480px;
     &__item {
       width: 145px;
     }
-
   }
 }
 
@@ -239,18 +237,19 @@ $s: 480px;
     &__items {
       flex-direction: column;
     }
+
     &__item {
       flex-direction: row;
-      width: 100%;
+      flex-wrap: wrap;
       align-items: baseline;
       margin-bottom: 20px;
-      flex-wrap: wrap;
+      width: 100%;
     }
 
     &__item-title {
       margin: 0 20px 10px 0;
-
     }
+
     .footer__item-link {
       margin: 0 20px 18px 0;
       text-decoration: underline;
@@ -318,8 +317,8 @@ $s: 480px;
 
   .products {
     &__item {
-      max-width: 420px;
       height: 100%;
+      max-width: 420px;
     }
   }
 }

@@ -123,9 +123,9 @@
   transform: translate(-50%, -50%);
 
   &::after {
+    left: 20%;
     background-image: url("../../images/icons/arrowleft.svg");
     transition: all 0.3s;
-    left: 20%;
   }
 
   &:hover::after {
@@ -138,10 +138,9 @@
   transform: translate(50%, -50%);
 
   &::after {
+    left: 27%;
     background-image: url("../../images/icons/arrowright.svg");
     transition: all 0.3s;
-    left: 27%;
-
   }
 
   &:hover::after {

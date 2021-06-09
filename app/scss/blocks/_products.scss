@@ -109,6 +109,7 @@
 
   &__item-subtitle {
     @include text-clamp;
+
     margin-bottom: 8px;
     min-height: 95px;
     -webkit-line-clamp: 4;
