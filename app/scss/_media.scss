@@ -239,8 +239,7 @@ $s: 480px;
     }
 
     &__item {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: wrap;
       align-items: baseline;
       margin-bottom: 20px;
       width: 100%;
