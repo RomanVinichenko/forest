@@ -1,0 +1,149 @@
+.articles {
+  position: relative;
+  padding: 80px 0 70px;
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__item-link {
+    display: block;
+  }
+
+  &__item {
+    margin: 10px 5px;
+    background-color: $wh;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0), 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__item-descr {
+    padding: 15px 55px 15px 15px;
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $title;
+  }
+
+  &__item-date {
+    font-size: 14px;
+  }
+
+  &__item-img {
+    width: 100%;
+    min-height: 251px;
+    object-fit: cover;
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+
+    li {
+      cursor: pointer;
+
+      button {
+        position: relative;
+        padding: 0;
+        width: 26px;
+        height: 26px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        background-color: transparent;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $grey;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s;
+        }
+
+        &:hover::before {
+          background-color: $accent;
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-color: $accent;
+
+          &::before {
+            background-color: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+    font-size: 0;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 25%;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.slick-prev {
+  position: relative;
+  left: 5px;
+  transform: translate(-50%, -50%);
+
+  &::after {
+    left: 20%;
+    background-image: url("../../images/icons/arrowleft.svg");
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    transform: translateX(-5px);
+  }
+}
+
+.slick-next {
+  right: 5px;
+  transform: translate(50%, -50%);
+
+  &::after {
+    left: 27%;
+    background-image: url("../../images/icons/arrowright.svg");
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,30 @@
+.advantages {
+  padding-top: 66px;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    width: 300px;
+  }
+
+  &__item-img {
+    margin-right: 24px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__item-title {
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 18px;
+    color: $title;
+  }
+}

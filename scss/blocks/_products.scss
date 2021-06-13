@@ -1,0 +1,146 @@
+.products {
+  padding-top: 80px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 280px;
+    overflow: hidden;
+    background-color: $bggrey;
+
+    &:hover {
+      .products__nav {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 42px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($title, 0.72);
+    transform: translateX(-800%);
+    transition: all 0.3s;
+  }
+
+  &__nav-btn {
+    margin-bottom: 24px;
+    padding: 12px;
+    border: none;
+    font-weight: 600;
+    color: $accent;
+    background-color: $wh;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $wh;
+      background-color: $accent;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-img {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: $wh;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  &__item-descr {
+    padding: 16px 16px 30px;
+  }
+
+  &__item-title {
+    @include text-clamp;
+
+    margin-bottom: 8px;
+    min-height: 58px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $title;
+  }
+
+  &__item-subtitle {
+    @include text-clamp;
+
+    margin-bottom: 8px;
+    min-height: 95px;
+    -webkit-line-clamp: 4;
+  }
+
+  &__item-price {
+    margin-right: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    color: $title;
+  }
+
+  &__item-preprice {
+    text-decoration: line-through;
+    color: #b0b0b0;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 82px;
+    border: 1px solid $accent;
+    font-weight: 600;
+    color: $accent;
+    background-color: $wh;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $wh;
+      background-color: $accent;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.footer {
+  padding-bottom: 50px;
+  color: $footer;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    border-top: 1px solid $grey;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  &__logo {
+    display: block;
+    margin: 6px 0 22px;
+  }
+
+  &__info-text {
+    margin-bottom: 15px;
+  }
+
+  &__info-location {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/icons/location.svg");
+    }
+  }
+
+  &__info-tel {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/icons/tel.svg");
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $bl;
+  }
+
+  &__item-link {
+    color: $footer;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__item-input {
+    margin-right: 5px;
+    padding: 10px 12px;
+    width: 242px;
+    border: none;
+    color: $title;
+    background-color: $bggrey;
+
+    &::placeholder {
+      color: $default;
+    }
+  }
+
+  &__item-btn {
+    position: relative;
+    width: 46px;
+    height: 45px;
+    border: none;
+    background-color: $accent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 11px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../images/icons/send.svg");
+    }
+
+    &:hover {
+      border-radius: 50%;
+    }
+  }
+
+  &__item-form {
+    width: 290px;
+  }
+
+  &__item-confirm {
+    display: flex;
+  }
+
+  &__info-location,
+  &__info-tel,
+  &__info-mail {
+    transition: all 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
