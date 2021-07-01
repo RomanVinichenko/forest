@@ -11,8 +11,8 @@
   }
 
   &__logo-img {
-    max-width: 75px;
-    max-height: 30px;
+    width: 100%;
+    max-width: 45px;
   }
 
   .menu {
@@ -70,6 +70,11 @@
     &__user-items {
       display: flex;
       align-items: center;
+    }
+
+    &__user-img {
+      width: 32px;
+      height: 32px;
     }
 
     &__user-item {

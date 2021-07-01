@@ -27,8 +27,14 @@
   }
 
   &__logo {
-    display: block;
-    margin: 6px 0 22px;
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__logo-img {
+    width: 60px;
+    height: 60px;
+    text-align: center;
   }
 
   &__info-text {
